@@ -12,6 +12,7 @@
 		EB59D45A20EA91FB003669FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB59D45820EA91FB003669FC /* Main.storyboard */; };
 		EB59D45D20EA91FB003669FC /* DesignCodeApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EB59D45B20EA91FB003669FC /* DesignCodeApp.xcdatamodeld */; };
 		EB59D46220EA91FC003669FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB59D46020EA91FC003669FC /* LaunchScreen.storyboard */; };
+		EB6ADD5020ED3F4A0084BFE9 /* SectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6ADD4F20ED3F4A0084BFE9 /* SectionViewController.swift */; };
 		EB73F8C220EBB08E00A74961 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB73F8C120EBB08E00A74961 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		EB59D45C20EA91FB003669FC /* DesignCodeApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DesignCodeApp.xcdatamodel; sourceTree = "<group>"; };
 		EB59D46120EA91FC003669FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB59D46320EA91FC003669FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB6ADD4F20ED3F4A0084BFE9 /* SectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionViewController.swift; sourceTree = "<group>"; };
 		EB73F8C120EBB08E00A74961 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,6 +60,7 @@
 			children = (
 				EB59D45420EA91FB003669FC /* AppDelegate.swift */,
 				EB59D45620EA91FB003669FC /* ViewController.swift */,
+				EB6ADD4F20ED3F4A0084BFE9 /* SectionViewController.swift */,
 				EB59D45820EA91FB003669FC /* Main.storyboard */,
 				EB59D46020EA91FC003669FC /* LaunchScreen.storyboard */,
 				EB59D46320EA91FC003669FC /* Info.plist */,
@@ -140,6 +143,7 @@
 			files = (
 				EB59D45720EA91FB003669FC /* ViewController.swift in Sources */,
 				EB59D45520EA91FB003669FC /* AppDelegate.swift in Sources */,
+				EB6ADD5020ED3F4A0084BFE9 /* SectionViewController.swift in Sources */,
 				EB59D45D20EA91FB003669FC /* DesignCodeApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
