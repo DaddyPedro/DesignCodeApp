@@ -21,11 +21,11 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="KyS-XV-chK">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="2000"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="55H-7f-BVG" userLabel="Home View">
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="55H-7f-BVG" userLabel="Hero View">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="452"/>
                                         <subviews>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" image="Home" translatesAutoresizingMaskIntoConstraints="NO" id="TXr-AU-PQR" userLabel="Home ">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="452"/>
+                                                <rect key="frame" x="0.0" y="-70" width="375" height="522"/>
                                             </imageView>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Art-iPhoneX" translatesAutoresizingMaskIntoConstraints="NO" id="ldm-Ws-b5v">
                                                 <rect key="frame" x="202" y="32" width="129" height="326"/>
@@ -255,7 +255,7 @@
                                             <constraint firstItem="1GT-do-hEz" firstAttribute="centerY" secondItem="ldm-Ws-b5v" secondAttribute="centerY" constant="-11" id="UAh-yK-cpF"/>
                                             <constraint firstAttribute="bottom" secondItem="TXr-AU-PQR" secondAttribute="bottom" id="Wjb-W8-F4o"/>
                                             <constraint firstItem="oyU-78-oTs" firstAttribute="centerY" secondItem="55H-7f-BVG" secondAttribute="centerY" constant="-55" id="rEu-hU-GzU"/>
-                                            <constraint firstItem="TXr-AU-PQR" firstAttribute="top" secondItem="55H-7f-BVG" secondAttribute="top" id="rKU-Xq-OgC"/>
+                                            <constraint firstItem="TXr-AU-PQR" firstAttribute="top" secondItem="55H-7f-BVG" secondAttribute="top" constant="-70" id="rKU-Xq-OgC"/>
                                             <constraint firstItem="ldm-Ws-b5v" firstAttribute="centerY" secondItem="oyU-78-oTs" secondAttribute="centerY" constant="24" id="wVe-SB-ME5"/>
                                         </constraints>
                                     </view>
@@ -360,8 +360,12 @@
                     </view>
                     <size key="freeformSize" width="375" height="2000"/>
                     <connections>
+                        <outlet property="bookView" destination="9Jh-js-eAw" id="8jK-Z2-lsU"/>
                         <outlet property="deviceImageView" destination="ldm-Ws-b5v" id="yo9-vf-oYT"/>
+                        <outlet property="heroView" destination="55H-7f-BVG" id="Yau-rP-RDm"/>
+                        <outlet property="homeImageView" destination="TXr-AU-PQR" id="chc-Wh-LwW"/>
                         <outlet property="playVisualEffectView" destination="1GT-do-hEz" id="JgW-8u-0pU"/>
+                        <outlet property="scrollView" destination="KyS-XV-chK" id="HUI-5H-0OI"/>
                         <outlet property="titleView" destination="oyU-78-oTs" id="k2e-LO-swy"/>
                     </connections>
                 </viewController>
@@ -373,7 +377,7 @@
         <scene sceneID="Dat-PF-aMv">
             <objects>
                 <viewController id="ZGj-pT-5yz" customClass="SectionViewController" customModule="DesignCodeApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="blK-Dn-GRr" customClass="Sec">
+                    <view key="view" contentMode="scaleToFill" id="blK-Dn-GRr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

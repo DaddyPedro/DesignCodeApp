@@ -14,13 +14,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var titleView: UILabel!
     @IBOutlet weak var deviceImageView: UIImageView!
     @IBOutlet weak var playVisualEffectView: UIVisualEffectView!
+    @IBOutlet weak var homeImageView: UIImageView!
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var heroView: UIView!
+    @IBOutlet weak var bookView: UIView!
     
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        alphaAnimation(dutation: 3)
+        alphaAnimation(duration: 3)
+        scrollView.delegate = self
 
     }
     
@@ -28,13 +33,13 @@ class ViewController: UIViewController {
     
     
     //Mark: - Alpha animation
-    func alphaAnimation(dutation: Double) {
+    func alphaAnimation(duration: Double) {
         
         titleView.alpha = 0
         deviceImageView.alpha = 0
         playVisualEffectView.alpha = 0
         
-        UIView.animate(withDuration: dutation) {
+        UIView.animate(withDuration: duration) {
             self.titleView.alpha = 1
             self.deviceImageView.alpha = 1
             self.playVisualEffectView.alpha = 1
@@ -57,7 +62,23 @@ class ViewController: UIViewController {
         
     }
     
-    
 
+
+}
+
+
+extension ViewController: UIScrollViewDelegate {
+    
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsety = scrollView.contentOffset.y
+        if offsety < 0 {
+            heroView.transform = CGAffineTransform(translationX: 0, y: offsety)
+            deviceImageView.transform = CGAffineTransform(translationX: 0, y: -offsety/3)
+            playVisualEffectView.transform = CGAffineTransform(translationX: 0, y: -offsety/3)
+            titleView.transform = CGAffineTransform(translationX: 0, y: -offsety/4)
+            homeImageView.transform = CGAffineTransform(translationX: 0, y: -offsety/5)
+        }
+    }
 }
 
