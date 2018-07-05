@@ -19,13 +19,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var heroView: UIView!
     @IBOutlet weak var bookView: UIView!
+    @IBOutlet weak var chapterCollectionView: UICollectionView!
     
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         alphaAnimation(duration: 3)
+        
+        
+        
         scrollView.delegate = self
+        chapterCollectionView.delegate = self
+        chapterCollectionView.dataSource = self
 
     }
     
@@ -64,6 +70,18 @@ class ViewController: UIViewController {
     
 
 
+}
+
+extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "sectionCell", for: indexPath)
+        return cell
+    }
+    
+    
 }
 
 
