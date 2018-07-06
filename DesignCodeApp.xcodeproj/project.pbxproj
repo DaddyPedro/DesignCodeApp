@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB133AB220EF9FB400ECE4D2 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB133AB120EF9FB400ECE4D2 /* Data.swift */; };
+		EB133AB420EFA02700ECE4D2 /* SectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB133AB320EFA02700ECE4D2 /* SectionCollectionViewCell.swift */; };
 		EB59D45520EA91FB003669FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB59D45420EA91FB003669FC /* AppDelegate.swift */; };
 		EB59D45720EA91FB003669FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB59D45620EA91FB003669FC /* ViewController.swift */; };
 		EB59D45A20EA91FB003669FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB59D45820EA91FB003669FC /* Main.storyboard */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EB133AB120EF9FB400ECE4D2 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		EB133AB320EFA02700ECE4D2 /* SectionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionCollectionViewCell.swift; sourceTree = "<group>"; };
 		EB59D45120EA91FB003669FC /* DesignCodeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignCodeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB59D45420EA91FB003669FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB59D45620EA91FB003669FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 				EB59D46320EA91FC003669FC /* Info.plist */,
 				EB73F8C120EBB08E00A74961 /* Assets.xcassets */,
 				EB59D45B20EA91FB003669FC /* DesignCodeApp.xcdatamodeld */,
+				EB133AB120EF9FB400ECE4D2 /* Data.swift */,
+				EB133AB320EFA02700ECE4D2 /* SectionCollectionViewCell.swift */,
 			);
 			path = DesignCodeApp;
 			sourceTree = "<group>";
@@ -142,8 +148,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB59D45720EA91FB003669FC /* ViewController.swift in Sources */,
+				EB133AB220EF9FB400ECE4D2 /* Data.swift in Sources */,
 				EB59D45520EA91FB003669FC /* AppDelegate.swift in Sources */,
 				EB6ADD5020ED3F4A0084BFE9 /* SectionViewController.swift in Sources */,
+				EB133AB420EFA02700ECE4D2 /* SectionCollectionViewCell.swift in Sources */,
 				EB59D45D20EA91FB003669FC /* DesignCodeApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

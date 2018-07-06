@@ -74,10 +74,15 @@ class ViewController: UIViewController {
 
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return sections.count
     }
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "sectionCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "sectionCell", for: indexPath) as! SectionCollectionViewCell
+        let section = sections[indexPath.row]
+        cell.cellImageView.image = UIImage(named: section["image"]!)
+        cell.cellTitleLabel.text = section["title"]
+        cell.cellCaptionLabel.text = section["caption"]
+        
         return cell
     }
     
