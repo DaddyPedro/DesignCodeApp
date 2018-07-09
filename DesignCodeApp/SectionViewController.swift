@@ -9,27 +9,51 @@
 import UIKit
 
 class SectionViewController: UIViewController {
+    
+    @IBOutlet weak var sectionTitleLable: UILabel!
+    @IBOutlet weak var sectionCaptionLabel: UILabel!
+    @IBOutlet weak var sectionImageView: UIImageView!
+    @IBOutlet weak var sectionBodyLabel: UILabel!
+    @IBOutlet weak var sectionProgressLabel: UILabel!
+    
+    
+    var sections: [[String:String]]!
+    var section: [String: String]!
+    var indexPath: IndexPath!
+    
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        displayData()
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
-    */
+
+
+    
+
+    @IBAction func closeButtonTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
+    
+    
+    func displayData() {
+        sectionTitleLable.text = section["title"]
+        sectionBodyLabel.text = section["body"]
+        sectionCaptionLabel.text = section["caption"]
+        sectionImageView.image = UIImage(named: section["image"]!)
+        sectionProgressLabel.text = "\(indexPath.row + 1) / \(sections.count)"
+        
+    }
+    
+    
 
 }

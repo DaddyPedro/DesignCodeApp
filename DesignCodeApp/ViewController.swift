@@ -22,6 +22,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var chapterCollectionView: UICollectionView!
     
     
+    var isStatusBarHidden = false
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,8 +34,39 @@ class ViewController: UIViewController {
         scrollView.delegate = self
         chapterCollectionView.delegate = self
         chapterCollectionView.dataSource = self
-
+        
+        
+        statusBarBackGroundColor(color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5))
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        isStatusBarHidden = false
+        UIView.animate(withDuration: 0.5) {
+            self.setNeedsStatusBarAppearanceUpdate()
+        }
+    }
+    
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+    override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
+        return .slide
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return isStatusBarHidden
+    }
+    func statusBarBackGroundColor(color: UIColor) {
+        guard let statusBar = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView else {
+            return
+        }
+        statusBar.backgroundColor = color
+    }
+    
+    
     
     
     
@@ -69,6 +102,8 @@ class ViewController: UIViewController {
         
     }
     
+    
+    
 
 
 }
@@ -88,6 +123,27 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         cell.layer.transform = animateCell(cellFrame: cell.frame)
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "homeToSectionViewController", sender: indexPath)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "homeToSectionViewController" {
+            let sectionViewController = segue.destination as! SectionViewController
+            if let indexPath = sender as? IndexPath {
+            let section = sections[indexPath.row]
+            sectionViewController.indexPath = indexPath
+            sectionViewController.sections = sections
+            sectionViewController.section = section
+                
+                isStatusBarHidden = true
+                UIView.animate(withDuration: 0.5, animations: {
+                    self.setNeedsStatusBarAppearanceUpdate()
+                })
+            }
+        }
     }
     
     
