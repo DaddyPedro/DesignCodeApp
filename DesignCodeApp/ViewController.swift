@@ -37,7 +37,7 @@ class ViewController: UIViewController {
         
         
 //        statusBarBackGroundColor(color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5))
-        navigationController?.setNavigationBarHidden(false, animated: true)
+        navigationController?.setNavigationBarHidden(false , animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {

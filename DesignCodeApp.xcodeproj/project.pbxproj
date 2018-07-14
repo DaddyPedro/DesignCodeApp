@@ -20,6 +20,8 @@
 		EB59D46220EA91FC003669FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB59D46020EA91FC003669FC /* LaunchScreen.storyboard */; };
 		EB6ADD5020ED3F4A0084BFE9 /* SectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6ADD4F20ED3F4A0084BFE9 /* SectionViewController.swift */; };
 		EB73F8C220EBB08E00A74961 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB73F8C120EBB08E00A74961 /* Assets.xcassets */; };
+		EB85120A20FA25B700B72420 /* BookmarksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB85120920FA25B700B72420 /* BookmarksTableViewController.swift */; };
+		EB85120C20FA48CC00B72420 /* bookmarkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB85120B20FA48CC00B72420 /* bookmarkTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		EB59D46320EA91FC003669FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB6ADD4F20ED3F4A0084BFE9 /* SectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionViewController.swift; sourceTree = "<group>"; };
 		EB73F8C120EBB08E00A74961 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EB85120920FA25B700B72420 /* BookmarksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksTableViewController.swift; sourceTree = "<group>"; };
+		EB85120B20FA48CC00B72420 /* bookmarkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bookmarkTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,8 @@
 				EB17603320F0EE7500ABDA24 /* testimonialCollectionViewCell.swift */,
 				EB14205D20F7C80500DC9B6B /* ChaptersViewController.swift */,
 				EB12378520F9301500B376AA /* Animation.swift */,
+				EB85120920FA25B700B72420 /* BookmarksTableViewController.swift */,
+				EB85120B20FA48CC00B72420 /* bookmarkTableViewCell.swift */,
 			);
 			path = DesignCodeApp;
 			sourceTree = "<group>";
@@ -165,6 +171,8 @@
 				EB59D45520EA91FB003669FC /* AppDelegate.swift in Sources */,
 				EB6ADD5020ED3F4A0084BFE9 /* SectionViewController.swift in Sources */,
 				EB133AB420EFA02700ECE4D2 /* SectionCollectionViewCell.swift in Sources */,
+				EB85120A20FA25B700B72420 /* BookmarksTableViewController.swift in Sources */,
+				EB85120C20FA48CC00B72420 /* bookmarkTableViewCell.swift in Sources */,
 				EB17603420F0EE7500ABDA24 /* testimonialCollectionViewCell.swift in Sources */,
 				EB59D45D20EA91FB003669FC /* DesignCodeApp.xcdatamodeld in Sources */,
 				EB12378620F9301500B376AA /* Animation.swift in Sources */,
