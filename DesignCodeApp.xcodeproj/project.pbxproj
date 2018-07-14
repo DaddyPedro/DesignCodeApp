@@ -22,6 +22,8 @@
 		EB73F8C220EBB08E00A74961 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB73F8C120EBB08E00A74961 /* Assets.xcassets */; };
 		EB85120A20FA25B700B72420 /* BookmarksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB85120920FA25B700B72420 /* BookmarksTableViewController.swift */; };
 		EB85120C20FA48CC00B72420 /* bookmarkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB85120B20FA48CC00B72420 /* bookmarkTableViewCell.swift */; };
+		EB85120E20FA5FEB00B72420 /* webViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB85120D20FA5FEB00B72420 /* webViewController.swift */; };
+		EB85121020FA65F600B72420 /* moreSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB85120F20FA65F600B72420 /* moreSceneViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		EB73F8C120EBB08E00A74961 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB85120920FA25B700B72420 /* BookmarksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksTableViewController.swift; sourceTree = "<group>"; };
 		EB85120B20FA48CC00B72420 /* bookmarkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bookmarkTableViewCell.swift; sourceTree = "<group>"; };
+		EB85120D20FA5FEB00B72420 /* webViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = webViewController.swift; sourceTree = "<group>"; };
+		EB85120F20FA65F600B72420 /* moreSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moreSceneViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,8 @@
 				EB12378520F9301500B376AA /* Animation.swift */,
 				EB85120920FA25B700B72420 /* BookmarksTableViewController.swift */,
 				EB85120B20FA48CC00B72420 /* bookmarkTableViewCell.swift */,
+				EB85120D20FA5FEB00B72420 /* webViewController.swift */,
+				EB85120F20FA65F600B72420 /* moreSceneViewController.swift */,
 			);
 			path = DesignCodeApp;
 			sourceTree = "<group>";
@@ -171,10 +177,12 @@
 				EB59D45520EA91FB003669FC /* AppDelegate.swift in Sources */,
 				EB6ADD5020ED3F4A0084BFE9 /* SectionViewController.swift in Sources */,
 				EB133AB420EFA02700ECE4D2 /* SectionCollectionViewCell.swift in Sources */,
+				EB85121020FA65F600B72420 /* moreSceneViewController.swift in Sources */,
 				EB85120A20FA25B700B72420 /* BookmarksTableViewController.swift in Sources */,
 				EB85120C20FA48CC00B72420 /* bookmarkTableViewCell.swift in Sources */,
 				EB17603420F0EE7500ABDA24 /* testimonialCollectionViewCell.swift in Sources */,
 				EB59D45D20EA91FB003669FC /* DesignCodeApp.xcdatamodeld in Sources */,
+				EB85120E20FA5FEB00B72420 /* webViewController.swift in Sources */,
 				EB12378620F9301500B376AA /* Animation.swift in Sources */,
 				EB14205E20F7C80500DC9B6B /* ChaptersViewController.swift in Sources */,
 			);

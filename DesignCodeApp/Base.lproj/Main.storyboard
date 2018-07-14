@@ -989,7 +989,7 @@
         <!--More-->
         <scene sceneID="8y0-Ob-mtl">
             <objects>
-                <viewController id="TDb-KV-cP2" sceneMemberID="viewController">
+                <viewController id="TDb-KV-cP2" customClass="moreSceneViewController" customModule="DesignCodeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rn9-FO-key">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="751"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1067,6 +1067,9 @@
                                                                 <state key="normal" title="Read on Safari" image="More/safari">
                                                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="safariButtonTapped:" destination="TDb-KV-cP2" eventType="touchUpInside" id="qEU-yL-l5L"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zFd-D4-ah3">
                                                                 <rect key="frame" x="0.0" y="180.5" width="374" height="59"/>
@@ -1077,6 +1080,9 @@
                                                                 <state key="normal" title="Community" image="More/community">
                                                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="communityButtonTapped:" destination="TDb-KV-cP2" eventType="touchUpInside" id="nc4-YG-5V9"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IbV-Eb-yPo">
                                                                 <rect key="frame" x="0.0" y="240.5" width="374" height="59.5"/>
@@ -1147,6 +1153,9 @@
                                         <state key="normal" title="Meng To" image="More/twitter">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="twitterButtonTapped:" destination="TDb-KV-cP2" eventType="touchUpInside" id="Zky-tV-H3U"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -1177,10 +1186,86 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="More" image="Tab Bar/more" selectedImage="Tab Bar/more-active" id="E9j-rT-Pyh"/>
                     <size key="freeformSize" width="414" height="800"/>
+                    <connections>
+                        <segue destination="t74-8g-JkR" kind="presentation" identifier="moreToWeb" id="3kM-2d-NnY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t9E-jp-dBU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5626" y="-258"/>
+            <point key="canvasLocation" x="5630" y="-249"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="gF6-Fl-pZH">
+            <objects>
+                <viewController id="iO4-Nn-R7f" customClass="webViewController" customModule="DesignCodeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jkb-Ut-TBe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uzm-dE-5d5">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Uzm-dE-5d5" firstAttribute="trailing" secondItem="gWR-gI-EiR" secondAttribute="trailing" id="ayL-HW-m98"/>
+                            <constraint firstItem="Uzm-dE-5d5" firstAttribute="top" secondItem="gWR-gI-EiR" secondAttribute="top" id="gpy-8E-ual"/>
+                            <constraint firstItem="Uzm-dE-5d5" firstAttribute="bottom" secondItem="gWR-gI-EiR" secondAttribute="bottom" id="tkX-ph-Tlf"/>
+                            <constraint firstItem="Uzm-dE-5d5" firstAttribute="leading" secondItem="gWR-gI-EiR" secondAttribute="leading" id="yZt-te-l6a"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gWR-gI-EiR"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="Item" image="Web-Back" id="bhR-qH-1kt">
+                            <connections>
+                                <action selector="goBack:" destination="iO4-Nn-R7f" id="LQN-y2-mba"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="gLn-oa-nYk"/>
+                        <barButtonItem title="Item" image="Web-Forward" id="E6V-ut-pYg">
+                            <connections>
+                                <action selector="goForward:" destination="iO4-Nn-R7f" id="BhU-u4-dIe"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="96h-vg-AFq"/>
+                        <barButtonItem title="Item" image="Web-Action" id="okH-ht-6vC">
+                            <connections>
+                                <action selector="actionButtonTapped:" destination="iO4-Nn-R7f" id="CyT-1O-Syt"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="n2P-QP-2dq"/>
+                        <barButtonItem title="Item" image="Web-Safari" id="Ty9-pk-fZu">
+                            <connections>
+                                <action selector="safariButtonTapped:" destination="iO4-Nn-R7f" id="Jen-qX-Bga"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="z4r-cD-uiC">
+                        <barButtonItem key="leftBarButtonItem" title="Done" id="e0H-9i-X0q">
+                            <connections>
+                                <action selector="doneButtonTapped:" destination="iO4-Nn-R7f" id="kLB-dD-zeE"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="Web-Refresh" id="hu1-aT-dsc">
+                            <connections>
+                                <action selector="reload:" destination="iO4-Nn-R7f" id="S5Q-wy-rjm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
+                    <connections>
+                        <outlet property="webView" destination="Uzm-dE-5d5" id="q8O-9s-SFv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tzj-hz-iV5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7631.1999999999998" y="-304.4977511244378"/>
         </scene>
         <!--Testimonial View Controller-->
         <scene sceneID="7gf-Ef-jXG">
@@ -1470,6 +1555,24 @@
             </objects>
             <point key="canvasLocation" x="4186.9565217391309" y="-283.69565217391306"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5Lj-z7-nBI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="t74-8g-JkR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="blackTranslucent" id="7gv-7J-3P9">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="iO4-Nn-R7f" kind="relationship" relationship="rootViewController" id="RWD-02-923"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pti-u5-TLb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6692" y="-304.4977511244378"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Action-Close" width="13" height="13"/>
@@ -1504,6 +1607,11 @@
         <image name="Tab Bar/more" width="30" height="8"/>
         <image name="Tab Bar/more-active" width="30" height="8"/>
         <image name="TabBar-Chapters-Active" width="28" height="24"/>
+        <image name="Web-Action" width="32" height="32"/>
+        <image name="Web-Back" width="32" height="32"/>
+        <image name="Web-Forward" width="32" height="32"/>
+        <image name="Web-Refresh" width="32" height="32"/>
+        <image name="Web-Safari" width="32" height="32"/>
         <image name="ios11" width="2880" height="1600"/>
     </resources>
 </document>
