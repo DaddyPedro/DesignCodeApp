@@ -36,7 +36,8 @@ class ViewController: UIViewController {
         chapterCollectionView.dataSource = self
         
         
-        statusBarBackGroundColor(color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5))
+//        statusBarBackGroundColor(color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5))
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -165,6 +166,11 @@ extension ViewController: UIScrollViewDelegate {
             titleView.transform = CGAffineTransform(translationX: 0, y: -offsety/4)
             homeImageView.transform = CGAffineTransform(translationX: 0, y: -offsety/5)
         }
+        
+        let navBarHidden = offsety <= 0
+        
+        navigationController?.setNavigationBarHidden(navBarHidden, animated: true)
+        
         
         if let collectionView = scrollView as? UICollectionView {
             
