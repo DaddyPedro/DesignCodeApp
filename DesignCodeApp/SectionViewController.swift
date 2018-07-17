@@ -38,10 +38,10 @@ class SectionViewController: UIViewController {
 
     
 
-    @IBAction func closeButtonTapped(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-        
-    }
+//    @IBAction func closeButtonTapped(_ sender: Any) {
+//        dismiss(animated: true, completion: nil)
+//        
+//    }
     
     
     
