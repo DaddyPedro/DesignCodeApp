@@ -18,6 +18,7 @@
 		EB59D45A20EA91FB003669FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB59D45820EA91FB003669FC /* Main.storyboard */; };
 		EB59D45D20EA91FB003669FC /* DesignCodeApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EB59D45B20EA91FB003669FC /* DesignCodeApp.xcdatamodeld */; };
 		EB59D46220EA91FC003669FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB59D46020EA91FC003669FC /* LaunchScreen.storyboard */; };
+		EB66DF6A20FE5D9F00342EB3 /* PresentSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB66DF6920FE5D9F00342EB3 /* PresentSection.swift */; };
 		EB6ADD5020ED3F4A0084BFE9 /* SectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6ADD4F20ED3F4A0084BFE9 /* SectionViewController.swift */; };
 		EB73F8C220EBB08E00A74961 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB73F8C120EBB08E00A74961 /* Assets.xcassets */; };
 		EB85120A20FA25B700B72420 /* BookmarksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB85120920FA25B700B72420 /* BookmarksTableViewController.swift */; };
@@ -40,6 +41,7 @@
 		EB59D45C20EA91FB003669FC /* DesignCodeApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DesignCodeApp.xcdatamodel; sourceTree = "<group>"; };
 		EB59D46120EA91FC003669FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB59D46320EA91FC003669FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB66DF6920FE5D9F00342EB3 /* PresentSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentSection.swift; sourceTree = "<group>"; };
 		EB6ADD4F20ED3F4A0084BFE9 /* SectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionViewController.swift; sourceTree = "<group>"; };
 		EB73F8C120EBB08E00A74961 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB85120920FA25B700B72420 /* BookmarksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksTableViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				EB85120B20FA48CC00B72420 /* bookmarkTableViewCell.swift */,
 				EB85120D20FA5FEB00B72420 /* webViewController.swift */,
 				EB85120F20FA65F600B72420 /* moreSceneViewController.swift */,
+				EB66DF6920FE5D9F00342EB3 /* PresentSection.swift */,
 			);
 			path = DesignCodeApp;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB17603220F0EE2A00ABDA24 /* testimonialViewController.swift in Sources */,
+				EB66DF6A20FE5D9F00342EB3 /* PresentSection.swift in Sources */,
 				EB59D45720EA91FB003669FC /* ViewController.swift in Sources */,
 				EB133AB220EF9FB400ECE4D2 /* Data.swift in Sources */,
 				EB59D45520EA91FB003669FC /* AppDelegate.swift in Sources */,

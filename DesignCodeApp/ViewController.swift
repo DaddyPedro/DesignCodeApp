@@ -21,6 +21,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var bookView: UIView!
     @IBOutlet weak var chapterCollectionView: UICollectionView!
     
+     let presentSection = PresentSection()
+    
     
     var isStatusBarHidden = false
     
@@ -135,9 +137,18 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
             let sectionViewController = segue.destination as! SectionViewController
             if let indexPath = sender as? IndexPath {
             let section = sections[indexPath.row]
+                
             sectionViewController.indexPath = indexPath
             sectionViewController.sections = sections
             sectionViewController.section = section
+                
+                sectionViewController.transitioningDelegate = self
+                let attributes = chapterCollectionView.layoutAttributesForItem(at: indexPath)!
+                let cellFrame = chapterCollectionView.convert(attributes.frame, to: view)
+                presentSection.cellFrame = cellFrame
+                presentSection.cellTransform = animateCell(cellFrame: cellFrame)
+                
+                
                 
                 isStatusBarHidden = true
                 UIView.animate(withDuration: 0.5, animations: {
@@ -220,6 +231,17 @@ extension ViewController: UIScrollViewDelegate {
     }
     
     }
+
+
+extension ViewController: UIViewControllerTransitioningDelegate {
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return presentSection
+    }
+    
+    
+    
+}
     
     
     

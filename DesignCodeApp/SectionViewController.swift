@@ -17,6 +17,16 @@ class SectionViewController: UIViewController {
     @IBOutlet weak var sectionProgressLabel: UILabel!
     
     
+    
+    
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var coverView: UIView!
+    @IBOutlet weak var subHeadVisualEffectView: UIVisualEffectView!
+    @IBOutlet weak var closeVisualEffectView: UIVisualEffectView!
+    
+    
+    
+    
     var sections: [[String:String]]!
     var section: [String: String]!
     var indexPath: IndexPath!
