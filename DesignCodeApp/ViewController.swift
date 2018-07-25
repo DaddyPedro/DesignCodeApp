@@ -142,6 +142,8 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
             sectionViewController.sections = sections
             sectionViewController.section = section
                 
+                //Passing data to section view controller for animation
+                
                 sectionViewController.transitioningDelegate = self
                 let attributes = chapterCollectionView.layoutAttributesForItem(at: indexPath)!
                 let cellFrame = chapterCollectionView.convert(attributes.frame, to: view)
@@ -216,6 +218,7 @@ extension ViewController: UIScrollViewDelegate {
         let rotation = CATransform3DRotate(transform, angle, 0, 1, 0)
         
         var scaleFromX = (1000 - (cellFrame.origin.x - 200))/1000
+
         let scaleMax: CGFloat = 1.0
         let scaleMin: CGFloat = 0.6
         if scaleFromX > scaleMax {

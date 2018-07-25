@@ -14,7 +14,7 @@ class PresentSection: NSObject, UIViewControllerAnimatedTransitioning {
     var cellTransform: CATransform3D!
     
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return 10
+        return 1
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
@@ -46,7 +46,7 @@ class PresentSection: NSObject, UIViewControllerAnimatedTransitioning {
         destination.scrollView.layer.shadowOffset.height = 10
         destination.scrollView.layer.shadowRadius = 20
         
-        // positioniong the close button and subhead visual effect to the top
+        // positioning the close button and subhead visual effect to the top
         
         let moveUpTransform = CGAffineTransform(translationX: 0, y: -100)
         let scaleUpTransform = CGAffineTransform(scaleX: 2, y: 2)
@@ -63,7 +63,7 @@ class PresentSection: NSObject, UIViewControllerAnimatedTransitioning {
         
         
         
-        let animator = UIViewPropertyAnimator(duration: 10, dampingRatio: 0.7) {
+        let animator = UIViewPropertyAnimator(duration: 1, dampingRatio: 0.7) {
             
             // Final State
             NSLayoutConstraint.deactivate([widthCondtraints, heightContraints, bottomContraints])
